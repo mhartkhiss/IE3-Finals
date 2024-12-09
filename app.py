@@ -1687,6 +1687,9 @@ if data is not None:
                 risk_score = (high_shopping + zero_savings + high_food) / 3
                 risk_level = "High" if risk_score > 50 else "Moderate" if risk_score > 30 else "Low"
                 
+                # Define risk color based on risk level
+                risk_color = "#ff4b4b" if risk_level == "High" else "#ffd700" if risk_level == "Moderate" else "#50C878"
+                
                 st.markdown(f"""
                     <div style='background: linear-gradient(145deg, #1a1f29, #23293a); 
                                 padding: 1.5rem; border-radius: 12px;'>
